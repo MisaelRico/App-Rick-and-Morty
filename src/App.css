@@ -1,0 +1,221 @@
+/* Estilos generales */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111c2e;
+}
+
+/* Estilos logo */
+.containerLogo {
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1e2837;
+  transition: background-color 0.3s ease;
+}
+.containerLogo img {
+  max-width: 55%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+/* Estilos buscador */
+.containerBuscador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  margin-top: 55px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  background-color: #111c2e;
+}
+.containerBuscador input[type="text"] {
+  padding: 10px;
+  border: 2px solid #0d6202;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 60%;
+  height: 35px;
+  font-size: 20px;
+  padding-left: 20px;
+}
+.containerBuscador button {
+  padding: 10px 20px;
+  background-color: #00cc0e;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 120px;
+  height: 55px;
+}
+.buscador button:hover {
+  background-color: #3366cc;
+}
+
+/* Resultados de búsqueda */
+.personajes-filtrados {
+  margin-bottom: 20px;
+}
+.resultadoBusqueda {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 30px;
+}
+.resultadoBusqueda h2 {
+  margin: 0px;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
+
+/* Estilos lista de personajes */
+.lista-personajes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #111c2e;
+}
+
+/* Estilos tarjeta de personaje */
+.personaje {
+  width: calc(24%);
+  padding: 20px;
+  margin-top: 35px;
+  border-radius: 10px;
+  background-color: #2222225e;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display:flex;
+  flex-direction: column;
+  align-items: left;
+}
+.containerNombreImagen {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.personaje img {
+  width: 60%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.personaje h2 {
+  color: #04ff15;
+  font-size: 28px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.personaje p {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+}
+.personaje:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de paginacion */
+.pagination {
+  display: flex;
+  align-content: center;
+  justify-content: space-betweens;
+  width: 100%;
+  margin: 50px;
+} 
+.pagination span {
+  color: white;
+  font-size: 25px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.pagination button {
+  width: 140px;
+  height: 50px;
+  font-size: 20px;
+  background-color: #01a10b;
+  color: white;
+  border-color: #fff;
+}
+
+/* Estilos para diseño responsivo */
+/* Para diferentes resoluciones */
+@media (max-width: 1316px) {
+  .lista-personajes {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .personaje {
+    width: calc(40%);
+  }
+  .personaje img {
+    width: 42%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .lista-personajes {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .personaje {
+    width: 100%;
+    text-align: center;
+  }
+  .personaje img {
+    width: 35%;
+  }
+  .containerBuscador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-left: 0px;
+  }
+  .containerBuscador button {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .pagination span {
+    display: none;
+  }
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+  }
+  .pagination button {
+    width: 80%;
+    height: 100%;
+    font-size:15px;
+    margin: 10px;
+  }
+  .resultadoBusqueda h2{
+    font-size: 20px;
+  }
+  .containerBuscador input[type="text"] {
+    height: 50%;
+  }
+  .containerBuscador button {
+    height: 50%;
+  }
+  .personaje img {
+    width: 70%;
+  }
+}
